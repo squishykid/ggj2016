@@ -6,3 +6,10 @@ install:
 - ./Scripts/install.sh
 script:
 - ./Scripts/build.sh
+deploy:
+  provider: releases
+  api_key:
+    secure: dT9h99ZK2CgMFkXL83NuFHt5o+1+x0YdMu6qjO9kDIHuwFm92kwpC3bwQYw5N8/E+ocpHNqG2dqPETqYdM9+CoM3O6G02SPJy6UvVhFn0dYsY+Tvx/GkhDslRmQcBcyRm6Vqmd04cnWX4+fatZ2/IEVsSKbHBbhHp86ONo2zlorE256ioUnQEbG/Uf4foOfbqEtoBSpzz4sMyZ86M2T8Ny9DOI4C41odAxhLDjKo2CQ4bJ0npxF7a+bzdKHDLx+qOhrAwmmlzulPHmG5D38axL544TF4SAHzEfherUeuOOT7eGwCd1EytN8fp3CjlPpk8htuhfD/gkzQKTZ7e2Xa0Argo6dj83xtbcnJGnywwgFE3Zg/27azd+hjrmJdjSyG1B5HIV1yuWBXPePCfEQbF6kIe3tdQXbBVQXAjPzhLsg/ux8uMUKFhkbJWmRSKjHscYHkFgB8l/fYS5Up6wnB9eKOvD8g7Tm4g98/+Lc+sOEpWitiok6r5NbcRH2NAwGW286ckEonjVVE6V+W6HszP+AjmojDRHjU9+e7+yRUiGsDbmz+fwr+4rZ9FjvfHxRZhCNK9xr2261PxggoM/xbjAhk/pjugkBGSyQo3L3n2hq0Z7/xgS0s+7Yh9aMflMf+qODD8qNq6xXnRa5Q6X0dIDgtTdUGUY0uLUumC+mzaMA=
+  file: ./Build/windows/ci-build.exe
+  on:
+    repo: squishykid/ggj2016
